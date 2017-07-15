@@ -52,7 +52,7 @@ $(document).ready(function() {
   // Close .answer click	
   }); 
   
-
+  // Reset-Button
   $("body").on("click", ".reset-button", function(event) {
   	clickSound.play();
   	resetGame();
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   function generateLoss() {
   	incorrectTally++;
-  	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/img/x.png'>";
+  	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/x.png?raw=true'>";
   	$(".mainArea").html(gameHTML);
 
   	// Change to 4000 or other amount
@@ -100,7 +100,7 @@ $(document).ready(function() {
   	  questionCounter++;
   	  generateHTML();
   	  counter = 30;
-  	  timeWrapper();
+  	  timerWrapper();
   	}
   	else {
   	  finalScreen();
@@ -122,7 +122,7 @@ $(document).ready(function() {
   }
 
   function finalScreen() {
-  	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset button' href='#' role='button'>Reset The Quiz!</a></p>";
+  	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
   	$(".mainArea").html(gameHTML);
   }
 
@@ -140,8 +140,14 @@ $(document).ready(function() {
   var gameHTML;
   var counter = 30;
   var questionArray = ["What is the capital of Australia?", "What is the capital of Liberia?", "What is the capital of Taiwan?", "What is the capital of Japan?", "What is the capital of China?", "What is the capital of Turkey?", "What is the capital of Colombia?", "what is the capital of India?"];
-  var answerArray = [["Canberra", "Melbourne", "Sydney", "Darwin"], ["Arthington", "Tuzon", "Marshall"], ["Tainan City", "Taichung", "Taipei", "Hsinchu"], ["Kyoto", "Hiroshima", "Tokyo", "Osaka"], ["Hong Kong", "Macau", "Shanghai", "Beijing"], ["Ankara", "Instanbul", "Antalya", "Bursa"], ["Medellin", "Bogota", "Cartagena", "Cali"], ["Mumbai", "Hyderabad", "Bangalore", "New Delhia"]];
-  var imageArray = ["<img class='center-block img-right' src='assets/img/australia.png'>", "<img class='center-block img-right' src='assets/img/liberia.png'>", "<img class='center-block img-right' src='assets/img/taiwan.png'>", "<img class='center-block img-right' src='assets/img/japan.png'>", "<img class='center-block img-right' src='assets/img/china.png'>", "<img class='center-block img-right' src='assets/img/turkey.png'>", "<img class='center-block img-right' src='assets/img/colombia.png'>", "<img class='center-block img-right' src='assets/img/india.png'>"];
+  var answerArray = [["Canberra", "Melbourne", "Sydney", "Darwin"], ["Arthington", "Tuzon", "Marshall"], ["Tainan City", "Taichung", "Taipei", "Hsinchu"], ["Kyoto", "Hiroshima", "Tokyo", "Osaka"], ["Hong Kong", "Macau", "Shanghai", "Beijing"], ["Ankara", "Instanbul", "Antalya", "Bursa"], ["Medellin", "Bogota", "Cartagena", "Cali"], ["Mumbai", "Hyderabad", "Bangalore", "New Delhi"]];
+  var imageArray = ["<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/australia.png?raw=true'>", "<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/liberia.png?raw=true'>", 
+  					"<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/taiwan.png?raw=true'>", 
+  					"<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/japan.png?raw=true'>", 
+  					"<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/china.png?raw=true'>", 
+  					"<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/turkey.png?raw=true'>", 
+  					"<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/colombia.png?raw=true'>", 
+  					"<img class='center-block img-right' src='https://github.com/jongryn/TriviaGame/blob/master/assets/images/india.png?raw=true'>"];
   var correctAnswers = ["A. Canberra", "B. Monrovia", "C. Taipei", "C. Tokyo", "D. Beijing", "A. Ankara", "B. Bogota", "D. New Delhi"];
   var questionCounter = 0;
   var selecterAnswer;
