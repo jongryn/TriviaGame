@@ -1,8 +1,19 @@
 /*
 // Created: July 13, 2017; 3:15 PM
 // Author: Jonathan Gryn
-// Revisions: Jon (7/13/17) - Added style    
+// Revisions: Jon (7/13/17) - Added style
+//			  Jon (7/15/17) - Changed font style    
 */
+body {
+  font-family: arial;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  color: yellow;
+}
 
 .jumbotron {
   box-sizing: border-box;
@@ -20,7 +31,7 @@
 	margin-top: 40px;
 }
 .answer:hover {
-  background: pink;
+  background: green;
 }
 .answer {
   padding-top: 7px;
@@ -41,8 +52,4 @@
 }
 .summary-correct {
   margin-top: 40px;
-}
-body {
-  background-color: black;
-  color: white;
 }
