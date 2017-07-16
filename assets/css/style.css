@@ -12,7 +12,22 @@ body {
 }
 
 h1 {
-  color: yellow;
+  color: white;
+  font-size: 75px;
+}
+
+strong {
+  position: relative;
+  top: -30px;
+}
+
+p {
+  line-height: 2.5;
+}
+
+.starwars {
+  height: auto;
+  width: 200px;
 }
 
 .jumbotron {
@@ -31,7 +46,8 @@ h1 {
 	margin-top: 40px;
 }
 .answer:hover {
-  background: green;
+  opacity: 1;
+  background: yellow;
 }
 .answer {
   padding-top: 7px;
