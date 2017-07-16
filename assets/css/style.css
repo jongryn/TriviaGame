@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+  height: 75px;
   color: white;
   font-size: 75px;
 }
@@ -23,6 +24,14 @@ strong {
 
 p {
   line-height: 2.5;
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  color: yellow;
 }
 
 .starwars {
